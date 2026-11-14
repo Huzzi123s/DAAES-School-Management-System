@@ -1,0 +1,257 @@
+
+<?php
+$current_page = 'contact';
+include 'includes/header.php';
+
+/*
+   Replace these details with actual school information.
+*/
+
+$school_address = "Add Your School Address Here";
+$school_phone = "Add School Contact Number";
+$school_email = "Add School Email Address";
+?>
+
+<main class="contact-page">
+
+    <!-- HERO SECTION -->
+    <section class="contact-hero">
+
+        <div class="contact-hero-content">
+
+            <span class="contact-tag">
+                DAAES SCHOOL
+            </span>
+
+            <h1>
+                Get in <span>Touch With Us</span>
+            </h1>
+
+            <p>
+                We are always happy to assist parents and
+                visitors. Contact us or visit our school
+                campus for further information.
+            </p>
+
+            <a href="#contact-information" class="contact-btn">
+                Contact Information
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="contact-intro">
+
+        <div class="contact-container">
+
+            <div class="contact-heading">
+
+                <span>WE ARE HERE TO HELP</span>
+
+                <h2>Let's Stay Connected</h2>
+
+                <p>
+                    Whether you need information about admissions,
+                    academics or school activities, our school office
+                    is available to guide and assist you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT INFORMATION -->
+    <section class="contact-information" id="contact-information">
+
+        <div class="contact-container">
+
+            <div class="contact-heading">
+
+                <span>CONTACT DETAILS</span>
+
+                <h2>Reach Our School</h2>
+
+                <p>
+                    Find our contact information and
+                    connect with DAAES School.
+                </p>
+
+            </div>
+
+
+            <div class="contact-cards">
+
+                <!-- ADDRESS -->
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <h3>Our Address</h3>
+
+                    <p>
+                        <?php echo htmlspecialchars($school_address); ?>
+                    </p>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <h3>Phone Number</h3>
+
+                    <p>
+                        <?php echo htmlspecialchars($school_phone); ?>
+                    </p>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        ✉️
+                    </div>
+
+                    <h3>Email Address</h3>
+
+                    <p>
+                        <?php echo htmlspecialchars($school_email); ?>
+                    </p>
+
+                </div>
+
+
+                <!-- OFFICE -->
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        🏫
+                    </div>
+
+                    <h3>School Office</h3>
+
+                    <p>
+                        Visit our school office for admissions,
+                        academic information and general enquiries.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VISIT SCHOOL -->
+    <section class="contact-visit">
+
+        <div class="contact-container">
+
+            <div class="visit-content">
+
+                <div class="visit-text">
+
+                    <span>WE WELCOME YOU</span>
+
+                    <h2>Visit Our School Campus</h2>
+
+                    <p>
+                        We encourage parents and guardians
+                        to visit DAAES School in person.
+                        Our school staff will be happy to
+                        provide information about admissions,
+                        classes and educational facilities.
+                    </p>
+
+                    <a href="admissions.php" class="contact-btn">
+                        Admission Information
+                    </a>
+
+                </div>
+
+                <div class="visit-icon">
+                    🏫
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMPORTANT INFORMATION -->
+    <section class="contact-notice">
+
+        <div class="contact-container">
+
+            <div class="contact-notice-content">
+
+                <div class="contact-notice-icon">
+                    ℹ️
+                </div>
+
+                <div>
+
+                    <h3>Need Admission Information?</h3>
+
+                    <p>
+                        All admission procedures are completed
+                        physically at the school campus.
+                        Parents or guardians are requested
+                        to visit the school office for admission
+                        forms and further guidance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="contact-cta">
+
+        <div class="contact-container">
+
+            <span>DAAES SCHOOL</span>
+
+            <h2>
+                We Look Forward to Meeting You!
+            </h2>
+
+            <p>
+                Come visit us and become a part
+                of our learning community.
+            </p>
+
+            <a href="academics.php" class="contact-btn">
+                Explore Academics
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<?php include 'includes/footer.php'; ?>
