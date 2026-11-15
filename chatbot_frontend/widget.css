@@ -1,0 +1,161 @@
+
+/* ==================================
+   DAAES CHATBOT WIDGET
+================================== */
+
+.daaes-chatbot-widget {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 99999;
+}
+
+/* Floating Chat Button */
+
+.chatbot-toggle {
+    width: 62px;
+    height: 62px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #10243d;
+    color: white;
+
+    font-size: 29px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 20px rgba(16, 36, 61, 0.3);
+
+    transition: 0.3s;
+}
+
+.chatbot-toggle:hover {
+    background: #d7b76a;
+    transform: scale(1.08);
+}
+
+
+/* ==================================
+   CHATBOT POPUP - LARGE SIZE
+================================== */
+
+.chatbot-popup {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    bottom: 85px;
+
+    width: 480px;
+    height: 720px;
+
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 110px);
+
+    background: white;
+
+    border-radius: 17px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 35px rgba(16, 36, 61, 0.25);
+
+    border: 1px solid #e5e9ef;
+}
+
+.chatbot-popup.active {
+    display: block;
+}
+
+
+/* ==================================
+   POPUP HEADER
+================================== */
+
+.chatbot-popup-header {
+    height: 65px;
+
+    padding: 12px 17px;
+
+    background: #10243d;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot-popup-header strong {
+    display: block;
+    font-size: 14px;
+}
+
+.chatbot-popup-header span {
+    display: block;
+    font-size: 10px;
+    color: #d7b76a;
+    margin-top: 5px;
+}
+
+.chatbot-popup-header button {
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ==================================
+   CHATBOT IFRAME
+================================== */
+
+.chatbot-popup iframe {
+    width: 100%;
+    height: calc(100% - 65px);
+
+    border: none;
+    display: block;
+
+    background: #f4f6fa;
+}
+
+
+/* ==================================
+   MOBILE RESPONSIVE
+================================== */
+
+@media (max-width: 480px) {
+
+    .daaes-chatbot-widget {
+        right: 12px;
+        bottom: 15px;
+    }
+
+    .chatbot-popup {
+        position: fixed;
+
+        right: 10px;
+        bottom: 82px;
+
+        width: calc(100vw - 20px);
+        height: calc(100vh - 105px);
+
+        max-width: none;
+        max-height: none;
+
+        border-radius: 15px;
+    }
+
+    .chatbot-toggle {
+        width: 56px;
+        height: 56px;
+    }
+
+}

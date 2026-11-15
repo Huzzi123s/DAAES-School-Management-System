@@ -1,0 +1,23 @@
+# Python virtual environment
+chatbot_backend/venv/
+
+# Secret environment file
+chatbot_backend/.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+/database/daaes_school.sql
+/assets/uploads/
+/uploads/
+/vendor/
+/chatbot_backend/venv/
+**/__pycache__/
+*.py[cod]
