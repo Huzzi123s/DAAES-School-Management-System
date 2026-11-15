@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DAAES School | AI Chatbot</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">D</div>
+
+                <div>
+                    <h2>DAAES</h2>
+                    <span>School Assistant</span>
+                </div>
+            </div>
+
+            <div class="sidebar-content">
+
+                <p class="sidebar-label">MENU</p>
+
+                <button class="menu-item active">
+                    <span>💬</span>
+                    New Conversation
+                </button>
+
+                <button class="menu-item" id="clearChatBtn">
+                    <span>🗑️</span>
+                    Clear Chat
+                </button>
+
+                <div class="sidebar-info">
+                    <div class="info-icon">🎓</div>
+                    <h3>DAAES School</h3>
+                    <p>Your smart school information assistant.</p>
+                </div>
+
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="online-dot"></div>
+                <span>Assistant Available</span>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="chat-header">
+
+                <div class="header-left">
+
+                    <div class="bot-avatar">🤖</div>
+
+                    <div>
+                        <h2>DAAES AI Assistant</h2>
+
+                        <p>
+                            <span class="status-dot"></span>
+                            Online Assistant
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+                    <span class="header-badge">AI POWERED</span>
+                </div>
+
+            </header>
+
+
+            <!-- Chat Messages -->
+            <section class="chat-area" id="chatArea">
+
+                <div class="welcome-section" id="welcomeSection">
+
+                    <!-- OFFICIAL DAAES SCHOOL LOGO -->
+                    <div class="welcome-icon">
+                        <img
+                            src="../assets/images/chatbot logo.png"
+                            alt="DAAES School Official Logo"
+                            class="welcome-school-logo"
+                        >
+                    </div>
+
+                    <h1>Welcome to DAAES School!</h1>
+
+                    <p>
+                        I'm your virtual school assistant.
+                        Ask me anything about school admissions,
+                        fees, timings, examinations and more.
+                    </p>
+
+                    <div class="suggestion-title">
+                        QUICK QUESTIONS
+                    </div>
+
+                    <div class="suggestions">
+
+                        <button class="suggestion-btn"
+                            data-message="What are the school timings?">
+                            🕒 School Timings
+                        </button>
+
+                        <button class="suggestion-btn"
+                            data-message="How can I get admission?">
+                            🎓 Admissions
+                        </button>
+
+                        <button class="suggestion-btn"
+                            data-message="Tell me about school fees.">
+                            💳 Fee Information
+                        </button>
+
+                        <button class="suggestion-btn"
+                            data-message="How can parents contact the school?">
+                            📞 Contact School
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="messages-container" id="messagesContainer"></div>
+
+            </section>
+
+
+            <!-- Input Area -->
+            <footer class="chat-footer">
+
+                <form id="chatForm" class="input-wrapper">
+
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Ask your question here..."
+                        autocomplete="off"
+                        maxlength="1000"
+                        required
+                    >
+
+                    <button type="submit" id="sendBtn">
+                        <span>Send</span>
+                        <span>➤</span>
+                    </button>
+
+                </form>
+
+                <p class="footer-note">
+                    DAAES School AI Assistant · Please verify important information with school administration.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
