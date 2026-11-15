@@ -1,0 +1,12 @@
+[33mcaa2ac8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfrontend-yashfeen[m[33m)[m Add frontend pages and design
+ frontend/about.php               |  247 [32m+++[m
+ frontend/academics.php           |  282 [32m++++[m
+ frontend/admissions.php          |  351 [32m+++++[m
+ frontend/assets/css/frontend.css | 3058 [32m++++++++++++++++++++++++++++++++++++++[m
+ frontend/assets/js/frontend.js   |    9 [32m+[m
+ frontend/contact.php             |  257 [32m++++[m
+ frontend/gallery.php             |  424 [32m++++++[m
+ frontend/includes/footer.php     |   43 [32m+[m
+ frontend/includes/header.php     |  230 [32m+++[m
+ frontend/index.php               |  233 [32m+++[m
+ 10 files changed, 5134 insertions(+)

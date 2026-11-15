@@ -1,0 +1,931 @@
+
+/* ==========================================
+   DAAES ADMIN DASHBOARD
+   NAVY BLUE & GOLD THEME
+   CORRECTED VERSION
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+.dashboard-body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    background: #f4f6fa;
+}
+
+.admin-dashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 0;
+    overflow: hidden;
+    background: #f4f6fa;
+    color: #17243b;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.dashboard-sidebar {
+    width: 255px;
+    min-width: 255px;
+    max-width: 255px;
+    height: 100vh;
+    flex: 0 0 255px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #04152f;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 12px 15px 14px;
+}
+
+/* SIDEBAR SCROLLBAR */
+
+.dashboard-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-track {
+    background: #04152f;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb {
+    background: #bd8b19;
+    border-radius: 10px;
+}
+
+/* LOGO */
+
+.dashboard-logo {
+    width: 100%;
+    flex-shrink: 0;
+    padding: 7px 4px 15px;
+}
+
+.dashboard-logo-showcase {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    padding: 18px 10px 15px;
+    text-align: center;
+
+    background: linear-gradient(145deg, #102f55, #061a35);
+    border: 1.5px solid #e8ad16;
+    border-radius: 22px;
+
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.dashboard-logo-showcase:before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(245,207,101,.28);
+    border-radius: 17px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.dashboard-logo-decoration {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    border: 1px solid rgba(232,173,22,.12);
+    border-radius: 50%;
+}
+
+.dashboard-school-logo-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 12px;
+    padding: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    border: 3px solid #e8ad16;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(255,255,255,.08),
+                0 5px 18px rgba(0,0,0,.28);
+
+    overflow: hidden;
+}
+
+.dashboard-school-logo-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.dashboard-logo-showcase h2 {
+    position: relative;
+    color: #f5b900;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.dashboard-logo-showcase p {
+    position: relative;
+    color: #f2f5fb;
+    font-size: 11px;
+    margin: 7px 0 0;
+}
+
+.dashboard-logo-bottom-line {
+    width: 65px;
+    height: 4px;
+    margin: 11px auto 0;
+    background: #e8ad16;
+    border-radius: 5px;
+}
+
+.dashboard-star {
+    position: absolute;
+    color: #f4b400;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.dashboard-star-one {
+    top: 14px;
+    right: 8px;
+    font-size: 24px;
+}
+
+.dashboard-star-two {
+    top: 65px;
+    left: 10px;
+    font-size: 17px;
+}
+
+.dashboard-star-three {
+    bottom: 22px;
+    left: 8px;
+    font-size: 24px;
+}
+
+/* ==========================================
+   SIDEBAR NAVIGATION - FIXED
+========================================== */
+
+.sidebar-label {
+    flex-shrink: 0;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #9ca9bb;
+    margin: 13px 10px 9px;
+}
+
+.dashboard-nav {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.dashboard-nav a {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+    padding: 12px 13px;
+
+    border-radius: 8px;
+
+    color: #d5deeb;
+    text-decoration: none;
+
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+
+    transition: background .25s, color .25s;
+
+    overflow: hidden;
+}
+
+.dashboard-nav a span {
+    display: block;
+    min-width: 0;
+    flex: 1;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dashboard-nav a i {
+    width: 20px;
+    min-width: 20px;
+    flex-shrink: 0;
+
+    text-align: center;
+    color: #e8ad16;
+    font-size: 16px;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+    background: linear-gradient(100deg, #e8ad16, #f5cf65);
+    color: #04152f;
+}
+
+.dashboard-nav a:hover i,
+.dashboard-nav a.active i {
+    color: #04152f;
+}
+
+/* ==========================================
+   ADMIN PROFILE
+========================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,.12);
+    flex-shrink: 0;
+}
+
+.admin-mini-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-avatar {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: #e8ad16;
+    color: #04152f;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.admin-mini-profile strong,
+.admin-mini-profile span {
+    display: block;
+    font-size: 13px;
+}
+
+.admin-mini-profile span {
+    color: #aebbd0;
+    margin-top: 3px;
+    font-size: 11px;
+}
+
+/* ==========================================
+   MAIN AREA
+========================================== */
+
+.dashboard-main {
+    flex: 1;
+    min-width: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* TOPBAR */
+
+.dashboard-main .dashboard-topbar {
+    min-height: 100px;
+    flex-shrink: 0;
+
+    background: linear-gradient(
+        110deg,
+        #04152f 0%,
+        #082653 60%,
+        #123d78 100%
+    );
+
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 3px solid #e8ad16;
+    box-shadow: 0 4px 15px rgba(4,21,47,.18);
+}
+
+.dashboard-main .dashboard-welcome {
+    color: #f5cf65;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+}
+
+.dashboard-main .dashboard-topbar h2 {
+    margin: 7px 0 0;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.dashboard-top-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.dashboard-main .dashboard-date {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.dashboard-main .dashboard-date i {
+    color: #f5cf65;
+    margin-right: 8px;
+    font-size: 19px;
+}
+
+.dashboard-main .top-admin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.dashboard-main .top-admin i {
+    font-size: 30px;
+    color: #f5cf65;
+}
+
+/* ==========================================
+   DASHBOARD CONTENT
+========================================== */
+
+.dashboard-content {
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 20px 25px 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-heading {
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.dashboard-heading h1 {
+    font-size: 26px;
+    color: #04152f;
+    margin: 0 0 5px;
+}
+
+.dashboard-heading p {
+    font-size: 13px;
+    color: #78859a;
+    margin: 0;
+}
+
+/* STATISTICS */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #e9edf3;
+    border-radius: 11px;
+    padding: 17px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    box-shadow: 0 4px 15px rgba(4,21,47,.04);
+    transition: .25s;
+    min-width: 0;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(4,21,47,.08);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 10px;
+
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+}
+
+.stat-icon.blue {
+    background: #e7efff;
+    color: #2859b5;
+}
+
+.stat-icon.gold {
+    background: #fff4d7;
+    color: #bd880d;
+}
+
+.stat-icon.purple {
+    background: #f0eaff;
+    color: #7952c7;
+}
+
+.stat-info {
+    min-width: 0;
+}
+
+.stat-info span {
+    font-size: 13px;
+    color: #7b8798;
+}
+
+.stat-info h2 {
+    color: #04152f;
+    font-size: 27px;
+    margin: 4px 0;
+}
+
+.stat-info small {
+    font-size: 11px;
+    color: #8793a5;
+    margin: 0;
+}
+
+/* QUICK ACTIONS */
+
+.dashboard-section {
+    margin-bottom: 17px;
+    flex-shrink: 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11px;
+}
+
+.section-heading h2 {
+    color: #04152f;
+    font-size: 19px;
+    margin: 0;
+}
+
+.section-heading span {
+    font-size: 12px;
+    color: #8993a3;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.quick-actions a {
+    min-width: 0;
+    background: #fff;
+    padding: 16px 10px;
+
+    border: 1px solid #e9edf3;
+    border-radius: 9px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #04152f;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: .25s;
+}
+
+.quick-actions a i {
+    display: block;
+    font-size: 23px;
+    color: #c08b0a;
+    margin-bottom: 9px;
+}
+
+.quick-actions a:hover {
+    border-color: #e8ad16;
+    background: #fffaf0;
+    transform: translateY(-2px);
+}
+
+/* TABLES */
+
+.dashboard-records {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+
+    flex: 1;
+    min-height: 200px;
+    margin-bottom: 15px;
+}
+
+.record-card {
+    background: #fff;
+    border-radius: 11px;
+    border: 1px solid #e9edf3;
+    padding: 15px;
+
+    min-width: 0;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.record-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11px;
+    flex-shrink: 0;
+}
+
+.record-heading h2 {
+    color: #04152f;
+    font-size: 18px;
+    margin: 0 0 4px;
+}
+
+.record-heading p {
+    font-size: 12px;
+    color: #8993a3;
+    margin: 0;
+}
+
+.record-heading a {
+    color: #b9850a;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.table-responsive {
+    width: 100%;
+    min-height: 0;
+    flex: 1;
+    overflow: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    min-width: 0;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.dashboard-table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #f5f7fb;
+    color: #68778d;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px 8px;
+}
+
+.dashboard-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #edf0f5;
+    color: #59677c;
+    font-size: 12px;
+}
+
+.dashboard-table td strong {
+    color: #04152f;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.status-active {
+    background: #e1f7ed;
+    color: #188657;
+}
+
+.status-other {
+    background: #fff0e8;
+    color: #c26a34;
+}
+
+.empty-record {
+    text-align: center;
+    padding: 20px !important;
+}
+
+/* ENROLLMENT SUMMARY */
+
+.enrollment-summary {
+    background: linear-gradient(110deg, #04152f, #0b2b56);
+    border-radius: 10px;
+    padding: 15px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.enrollment-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #e8ad16;
+    color: #04152f;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.enrollment-summary h3 {
+    font-size: 16px;
+    margin: 0 0 4px;
+}
+
+.enrollment-summary p {
+    color: #c2ccdc;
+    font-size: 12px;
+    margin: 0;
+}
+
+.enrollment-summary > strong {
+    margin-left: auto;
+    font-size: 27px;
+    color: #f5cf65;
+}
+
+/* FOOTER */
+
+.dashboard-footer {
+    text-align: center;
+    padding: 10px 0 0;
+    color: #8c97a8;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .dashboard-content {
+        overflow-y: auto;
+    }
+
+    .dashboard-records {
+        grid-template-columns: 1fr;
+        flex: none;
+    }
+
+    .record-card {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .dashboard-body {
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+    }
+
+    .admin-dashboard {
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
+    }
+
+    .dashboard-sidebar {
+        width: 70px;
+        min-width: 70px;
+        max-width: 70px;
+        flex: 0 0 70px;
+
+        height: auto;
+        min-height: 100vh;
+        padding: 12px 7px;
+    }
+
+    .dashboard-logo {
+        padding: 0 0 12px;
+    }
+
+    .dashboard-logo-showcase {
+        min-height: 0;
+        padding: 7px 2px;
+        border: none;
+        border-radius: 9px;
+        background: transparent;
+    }
+
+    .dashboard-logo-showcase:before,
+    .dashboard-logo-decoration,
+    .dashboard-logo-showcase h2,
+    .dashboard-logo-showcase p,
+    .dashboard-logo-bottom-line,
+    .dashboard-star {
+        display: none;
+    }
+
+    .dashboard-school-logo-box {
+        width: 43px;
+        height: 43px;
+        padding: 2px;
+        margin: 0 auto;
+        border-width: 2px;
+    }
+
+    .sidebar-label {
+        display: none;
+    }
+
+    .dashboard-nav a {
+        justify-content: center;
+        padding: 12px 4px;
+        gap: 0;
+        font-size: 0;
+    }
+
+    .dashboard-nav a span {
+        display: none;
+    }
+
+    .dashboard-nav a i {
+        font-size: 16px;
+        width: auto;
+        min-width: 0;
+    }
+
+    .admin-mini-profile {
+        justify-content: center;
+    }
+
+    .admin-mini-profile > div:last-child {
+        display: none;
+    }
+
+    .dashboard-main {
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
+    }
+
+    .dashboard-main .dashboard-topbar {
+        min-height: 78px;
+        padding: 12px;
+    }
+
+    .dashboard-main .dashboard-topbar h2 {
+        font-size: 21px;
+    }
+
+    .dashboard-main .dashboard-welcome {
+        font-size: 10px;
+    }
+
+    .dashboard-top-right {
+        gap: 10px;
+    }
+
+    .dashboard-main .dashboard-date {
+        display: none;
+    }
+
+    .dashboard-main .top-admin {
+        font-size: 14px;
+    }
+
+    .dashboard-main .top-admin i {
+        font-size: 23px;
+    }
+
+    .dashboard-content {
+        padding: 15px 11px;
+        overflow: visible;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 21px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-records {
+        grid-template-columns: 1fr;
+    }
+
+    .record-card {
+        min-height: 220px;
+    }
+
+    .enrollment-summary {
+        padding: 12px;
+    }
+
+    .enrollment-summary > strong {
+        font-size: 21px;
+    }
+
+    .dashboard-footer {
+        padding: 15px 0 5px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .dashboard-sidebar {
+        width: 58px;
+        min-width: 58px;
+        max-width: 58px;
+        flex: 0 0 58px;
+        padding: 10px 5px;
+    }
+
+    .dashboard-top-right {
+        gap: 7px;
+    }
+}
