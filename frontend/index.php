@@ -56,7 +56,6 @@ include 'includes/header.php';
 
         </div>
 
-
         <!-- SCHOOL LOGO -->
         <div class="hero-visual">
 
@@ -87,15 +86,12 @@ include 'includes/header.php';
 
     </section>
 
-
     <!-- INTRODUCTION -->
     <section class="intro-section">
 
         <div class="section-heading">
             <span>DISCOVER DAAES</span>
-
             <h2>Welcome to Our School</h2>
-
             <div class="heading-line"></div>
         </div>
 
@@ -112,15 +108,12 @@ include 'includes/header.php';
 
     </section>
 
-
     <!-- FEATURES -->
     <section class="features-section">
 
         <div class="section-heading">
             <span>THE DAAES EXPERIENCE</span>
-
             <h2>Why Choose Our School?</h2>
-
             <div class="heading-line"></div>
 
             <p>
@@ -132,45 +125,34 @@ include 'includes/header.php';
 
             <div class="feature-card">
                 <div class="feature-icon">✦</div>
-
                 <h3>Quality Education</h3>
-
                 <p>
                     Encouraging academic excellence through
                     meaningful learning.
                 </p>
             </div>
 
-
             <div class="feature-card">
                 <div class="feature-icon">★</div>
-
                 <h3>Dedicated Teachers</h3>
-
                 <p>
                     Helping students learn and grow through
                     guidance and support.
                 </p>
             </div>
 
-
             <div class="feature-card">
                 <div class="feature-icon">◆</div>
-
                 <h3>Student Development</h3>
-
                 <p>
                     Building confidence, creativity and
                     essential life skills.
                 </p>
             </div>
 
-
             <div class="feature-card">
                 <div class="feature-icon">✧</div>
-
                 <h3>Positive Environment</h3>
-
                 <p>
                     Providing a welcoming environment
                     for learning and development.
@@ -180,7 +162,6 @@ include 'includes/header.php';
         </div>
 
     </section>
-
 
     <!-- ACADEMICS -->
     <section class="academics-section">
@@ -208,7 +189,6 @@ include 'includes/header.php';
 
     </section>
 
-
     <!-- ADMISSION -->
     <section class="admission-section">
 
@@ -229,5 +209,18 @@ include 'includes/header.php';
     </section>
 
 </main>
+
+<!-- FLOATING AI CHATBOT -->
+<a
+    href="../chatbot_frontend/index.html"
+    class="chatbot-float"
+    title="Chat with DAAES AI Assistant"
+    aria-label="Open DAAES AI Assistant"
+>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/>
+    </svg>
+    <span class="chatbot-pulse"></span>
+</a>
 
 <?php include 'includes/footer.php'; ?>
