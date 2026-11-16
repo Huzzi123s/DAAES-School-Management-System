@@ -3,103 +3,409 @@
 $current_page = 'gallery';
 include 'includes/header.php';
 
-/*
-    Gallery images folder:
-    assets/images/gallery/
-*/
-
 $gallery_items = [
 
     [
-        'image' => 'assets/images/gallery/event1.jpg',
-        'title' => 'School Events',
-        'category' => 'events',
-        'description' => 'Special moments and school events.'
+        'image' => '../assets/images/1.jfif',
+        'title' => 'School Event 1'
     ],
 
     [
-        'image' => 'assets/images/gallery/event2.jpg',
-        'title' => 'School Celebrations',
-        'category' => 'celebrations',
-        'description' => 'Celebrating special occasions together.'
+        'image' => '../assets/images/2.jfif',
+        'title' => 'School Event 2'
     ],
 
     [
-        'image' => 'assets/images/gallery/class1.jpg',
-        'title' => 'Classroom Activities',
-        'category' => 'classroom',
-        'description' => 'Learning through engaging activities.'
+        'image' => '../assets/images/3.jfif',
+        'title' => 'Classroom 1'
     ],
 
     [
-        'image' => 'assets/images/gallery/sports1.jpg',
-        'title' => 'Sports Activities',
-        'category' => 'sports',
-        'description' => 'Encouraging teamwork and participation.'
+        'image' => '../assets/images/4.jfif',
+        'title' => 'Sports 1'
     ],
 
     [
-        'image' => 'assets/images/gallery/campus1.jpg',
-        'title' => 'School Campus',
-        'category' => 'campus',
-        'description' => 'A glimpse of our school environment.'
+        'image' => '../assets/images/5.jfif',
+        'title' => 'Campus 1'
     ],
 
     [
-        'image' => 'assets/images/gallery/class2.jpg',
-        'title' => 'Learning Activities',
-        'category' => 'classroom',
-        'description' => 'Creating meaningful learning experiences.'
-    ],
-
-    [
-        'image' => 'assets/images/gallery/event3.jpg',
-        'title' => 'School Functions',
-        'category' => 'events',
-        'description' => 'Memorable school gatherings.'
-    ],
-
-    [
-        'image' => 'assets/images/gallery/sports2.jpg',
-        'title' => 'Games & Sports',
-        'category' => 'sports',
-        'description' => 'Promoting healthy and active participation.'
-    ],
-
-    [
-        'image' => 'assets/images/gallery/celebration1.jpg',
-        'title' => 'Special Celebrations',
-        'category' => 'celebrations',
-        'description' => 'Sharing happiness and special moments.'
-    ],
-
-    [
-        'image' => 'assets/images/gallery/campus2.jpg',
-        'title' => 'Our Learning Space',
-        'category' => 'campus',
-        'description' => 'An environment for learning and growth.'
-    ],
-
-    [
-        'image' => 'assets/images/gallery/class3.jpg',
-        'title' => 'Creative Learning',
-        'category' => 'classroom',
-        'description' => 'Encouraging creativity and curiosity.'
-    ],
-
-    [
-        'image' => 'assets/images/gallery/event4.jpg',
-        'title' => 'School Memories',
-        'category' => 'events',
-        'description' => 'Capturing special moments at DAAES School.'
+        'image' => '../assets/images/6.jfif',
+        'title' => 'Classroom 2'
     ]
 
 ];
 ?>
 
+<style>
+
+/* =====================================
+   GALLERY PAGE
+===================================== */
+
+.gallery-page {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-container {
+    width: 92%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.gallery-hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #04152f,
+        #0b2b56,
+        #061c3c
+    );
+
+    color: white;
+}
+
+.gallery-hero-content {
+    max-width: 850px;
+}
+
+.gallery-tag {
+    color: #f5cf65;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.gallery-hero h1 {
+    font-size: 55px;
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+.gallery-hero h1 span {
+    color: #e8ad16;
+}
+
+.gallery-hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #e0e7f0;
+}
+
+.gallery-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #e8ad16;
+    color: #04152f;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.gallery-btn:hover {
+    background: #f5cf65;
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   INTRO SECTION
+===================================== */
+
+.gallery-intro {
+    padding: 65px 0 25px;
+}
+
+.gallery-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.gallery-heading > span {
+    color: #c18b0b;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.gallery-heading h2 {
+    font-size: 36px;
+    color: #04152f;
+    margin: 15px 0;
+    font-weight: 800;
+}
+
+.gallery-heading p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* =====================================
+   GALLERY SECTION
+===================================== */
+
+.school-gallery {
+    padding: 55px 0 90px;
+    background: #f7f9fc;
+}
+
+/* =====================================
+   GALLERY GRID
+   3 COLUMNS - 2 ROWS
+===================================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* =====================================
+   GALLERY CARDS
+===================================== */
+
+.gallery-item {
+    width: 100%;
+    min-width: 0;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #e6eaf0;
+
+    box-shadow: 0 6px 22px rgba(4, 21, 47, 0.13);
+
+    transition: 0.3s ease;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* IMAGE HOVER */
+
+.gallery-image:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-image {
+    box-shadow: 0 12px 30px rgba(4, 21, 47, 0.20);
+}
+
+/* REMOVE ALL IMAGE LABELS */
+
+.gallery-overlay {
+    display: none !important;
+}
+
+/* =====================================
+   IMAGE VIEW BUTTON
+===================================== */
+
+.gallery-view-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #e8ad16;
+    color: #04152f;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-image:hover .gallery-view-btn {
+    opacity: 1;
+}
+
+/* =====================================
+   LIGHTBOX
+===================================== */
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.94);
+
+    z-index: 99999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.gallery-lightbox.show {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-content h3 {
+    display: none;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+/* =====================================
+   CTA SECTION
+===================================== */
+
+.gallery-cta {
+    background: linear-gradient(
+        135deg,
+        #04152f,
+        #0b2b56
+    );
+
+    text-align: center;
+    padding: 75px 20px;
+    color: white;
+}
+
+.gallery-cta > .gallery-container > span {
+    color: #f5cf65;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.gallery-cta h2 {
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.gallery-cta p {
+    color: #dce4f0;
+    font-size: 17px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+/* TABLETS */
+
+@media (max-width: 992px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .gallery-image {
+        height: 300px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .gallery-container {
+        width: 94%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .gallery-image {
+        height: 280px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 36px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 28px;
+    }
+
+    .gallery-cta h2 {
+        font-size: 27px;
+    }
+
+    .gallery-view-btn {
+        opacity: 1;
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+    }
+
+}
+
+</style>
+
+
 <main class="gallery-page">
 
     <!-- HERO SECTION -->
+
     <section class="gallery-hero">
 
         <div class="gallery-hero-content">
@@ -128,6 +434,7 @@ $gallery_items = [
 
 
     <!-- INTRODUCTION -->
+
     <section class="gallery-intro">
 
         <div class="gallery-container">
@@ -152,6 +459,7 @@ $gallery_items = [
 
 
     <!-- GALLERY SECTION -->
+
     <section class="school-gallery" id="school-gallery">
 
         <div class="gallery-container">
@@ -170,80 +478,27 @@ $gallery_items = [
             </div>
 
 
-            <!-- FILTER BUTTONS -->
-            <div class="gallery-filters">
-
-                <button class="gallery-filter active"
-                        data-filter="all">
-                    All Photos
-                </button>
-
-                <button class="gallery-filter"
-                        data-filter="events">
-                    School Events
-                </button>
-
-                <button class="gallery-filter"
-                        data-filter="classroom">
-                    Classroom
-                </button>
-
-                <button class="gallery-filter"
-                        data-filter="celebrations">
-                    Celebrations
-                </button>
-
-                <button class="gallery-filter"
-                        data-filter="sports">
-                    Sports
-                </button>
-
-                <button class="gallery-filter"
-                        data-filter="campus">
-                    Campus
-                </button>
-
-            </div>
-
-
             <!-- GALLERY GRID -->
+
             <div class="gallery-grid">
 
                 <?php foreach ($gallery_items as $item) { ?>
 
-                    <div class="gallery-item"
-                         data-category="<?php echo htmlspecialchars($item['category']); ?>">
+                    <div class="gallery-item">
 
                         <div class="gallery-image">
 
                             <img
                                 src="<?php echo htmlspecialchars($item['image']); ?>"
-                                alt="<?php echo htmlspecialchars($item['title']); ?>"
+                                alt="DAAES School Gallery"
                                 loading="lazy"
                             >
-
-                            <div class="gallery-overlay">
-
-                                <span class="gallery-image-icon">
-                                    ↗
-                                </span>
-
-                                <h3>
-                                    <?php echo htmlspecialchars($item['title']); ?>
-                                </h3>
-
-                                <p>
-                                    <?php echo htmlspecialchars($item['description']); ?>
-                                </p>
-
-                            </div>
 
                             <button
                                 type="button"
                                 class="gallery-view-btn"
                                 aria-label="View image"
                                 data-image="<?php echo htmlspecialchars($item['image']); ?>"
-                                data-title="<?php echo htmlspecialchars($item['title']); ?>"
                             >
                                 +
                             </button>
@@ -256,31 +511,31 @@ $gallery_items = [
 
             </div>
 
-            <p class="gallery-empty" hidden>
-                No images available in this category yet.
-            </p>
-
         </div>
 
     </section>
 
 
     <!-- IMAGE LIGHTBOX -->
+
     <div class="gallery-lightbox" id="galleryLightbox">
 
         <button
             type="button"
             class="lightbox-close"
             id="lightboxClose"
-            aria-label="Close image preview">
+            aria-label="Close image preview"
+        >
             &times;
         </button>
 
         <div class="lightbox-content">
 
-            <img src="" alt="Gallery Preview" id="lightboxImage">
-
-            <h3 id="lightboxTitle"></h3>
+            <img
+                src=""
+                alt="Gallery Preview"
+                id="lightboxImage"
+            >
 
         </div>
 
@@ -288,6 +543,7 @@ $gallery_items = [
 
 
     <!-- CTA SECTION -->
+
     <section class="gallery-cta">
 
         <div class="gallery-container">
@@ -303,8 +559,6 @@ $gallery_items = [
                 futures together.
             </p>
 
-           
-
         </div>
 
     </section>
@@ -313,67 +567,25 @@ $gallery_items = [
 
 
 <!-- GALLERY JAVASCRIPT -->
+
 <script>
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const filters = document.querySelectorAll('.gallery-filter');
-    const items = document.querySelectorAll('.gallery-item');
-    const emptyMessage = document.querySelector('.gallery-empty');
-
     const lightbox = document.getElementById('galleryLightbox');
+
     const lightboxImage = document.getElementById('lightboxImage');
-    const lightboxTitle = document.getElementById('lightboxTitle');
+
     const closeButton = document.getElementById('lightboxClose');
-
-    // CATEGORY FILTER
-    filters.forEach(function (button) {
-
-        button.addEventListener('click', function () {
-
-            filters.forEach(function (filter) {
-                filter.classList.remove('active');
-            });
-
-            this.classList.add('active');
-
-            const selectedCategory = this.dataset.filter;
-            let visibleCount = 0;
-
-            items.forEach(function (item) {
-
-                const category = item.dataset.category;
-
-                if (
-                    selectedCategory === 'all' ||
-                    category === selectedCategory
-                ) {
-
-                    item.classList.remove('gallery-hidden');
-                    visibleCount++;
-
-                } else {
-
-                    item.classList.add('gallery-hidden');
-
-                }
-
-            });
-
-            emptyMessage.hidden = visibleCount !== 0;
-
-        });
-
-    });
 
 
     // OPEN IMAGE PREVIEW
+
     document.querySelectorAll('.gallery-view-btn').forEach(function (button) {
 
         button.addEventListener('click', function () {
 
             lightboxImage.src = this.dataset.image;
-            lightboxTitle.textContent = this.dataset.title;
 
             lightbox.classList.add('show');
 
@@ -384,7 +596,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // CLOSE IMAGE PREVIEW
+    // CLOSE LIGHTBOX
+
     function closeLightbox() {
 
         lightbox.classList.remove('show');
@@ -395,10 +608,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
+
     closeButton.addEventListener('click', closeLightbox);
 
 
     // CLOSE WHEN CLICKING OUTSIDE IMAGE
+
     lightbox.addEventListener('click', function (event) {
 
         if (event.target === lightbox) {
@@ -409,6 +624,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // CLOSE WITH ESCAPE KEY
+
     document.addEventListener('keydown', function (event) {
 
         if (event.key === 'Escape') {

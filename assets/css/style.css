@@ -450,3 +450,96 @@ a {
 
 
 
+
+/* ==========================================
+   DAAES SCHOOL - FLOATING AI CHATBOT
+   PREMIUM ROYAL GOLD DESIGN
+========================================== */
+
+.chatbot-float {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #f5cf65,
+        #e8ad16,
+        #c88b08
+    );
+
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 8px 25px rgba(8, 38, 83, 0.25),
+        0 0 25px rgba(232, 173, 22, 0.35);
+
+    text-decoration: none;
+    z-index: 99999;
+
+    transition: all 0.3s ease;
+}
+
+.chatbot-float svg {
+    width: 36px;
+    height: 36px;
+
+    fill: none;
+    stroke: #082653;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition: transform 0.3s ease;
+}
+
+.chatbot-float:hover {
+    transform: translateY(-5px) scale(1.07);
+
+    box-shadow:
+        0 12px 30px rgba(8, 38, 83, 0.3),
+        0 0 35px rgba(232, 173, 22, 0.55);
+}
+
+.chatbot-float:hover svg {
+    transform: scale(1.12);
+}
+
+.chatbot-pulse {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+
+    width: 14px;
+    height: 14px;
+
+    background: #20b96b;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+/* MOBILE CHATBOT */
+
+@media (max-width: 650px) {
+
+    .chatbot-float {
+        width: 64px;
+        height: 64px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .chatbot-float svg {
+        width: 30px;
+        height: 30px;
+    }
+
+}

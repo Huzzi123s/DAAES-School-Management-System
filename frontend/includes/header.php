@@ -1,4 +1,3 @@
-```php
 <?php
 $current_page = $current_page ?? 'home';
 ?>

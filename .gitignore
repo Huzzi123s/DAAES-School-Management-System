@@ -13,4 +13,15 @@ __pycache__/
 
 # System files
 .DS_Store
+<<<<<<< HEAD
 Thumbs.db
+=======
+Thumbs.db
+/database/daaes_school.sql
+/assets/uploads/
+/uploads/
+/vendor/
+/chatbot_backend/venv/
+**/__pycache__/
+*.py[cod]
+>>>>>>> 23449ff16e22da8ef9266fee9b3463520619eef5

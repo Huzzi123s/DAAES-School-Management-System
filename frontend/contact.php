@@ -3,13 +3,9 @@
 $current_page = 'contact';
 include 'includes/header.php';
 
-/*
-   Replace these details with actual school information.
-*/
-
-$school_address = "Add Your School Address Here";
-$school_phone = "Add School Contact Number";
-$school_email = "Add School Email Address";
+$school_address = "Karachi, Crossing Allah Wala Town, Sector 31/A, Near Jamia Rehmat Masjid";
+$school_phone = "0336-3875074";
+$school_email = "mhuzaifashiekh@gmail.com";
 ?>
 
 <main class="contact-page">
@@ -113,7 +109,9 @@ $school_email = "Add School Email Address";
                     <h3>Phone Number</h3>
 
                     <p>
-                        <?php echo htmlspecialchars($school_phone); ?>
+                        <a href="tel:03363875074">
+                            <?php echo htmlspecialchars($school_phone); ?>
+                        </a>
                     </p>
 
                 </div>
@@ -129,24 +127,9 @@ $school_email = "Add School Email Address";
                     <h3>Email Address</h3>
 
                     <p>
-                        <?php echo htmlspecialchars($school_email); ?>
-                    </p>
-
-                </div>
-
-
-                <!-- OFFICE -->
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        🏫
-                    </div>
-
-                    <h3>School Office</h3>
-
-                    <p>
-                        Visit our school office for admissions,
-                        academic information and general enquiries.
+                        <a href="mailto:mhuzaifashiekh@gmail.com">
+                            <?php echo htmlspecialchars($school_email); ?>
+                        </a>
                     </p>
 
                 </div>
